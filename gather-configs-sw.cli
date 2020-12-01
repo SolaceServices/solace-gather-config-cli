@@ -1,0 +1,93 @@
+end
+home
+no paging
+! --------------- configs ------------------------
+show backup > /configs/show-backup.out
+show cluster * detail > /configs/show-cluster-details.out
+show acl-profile * detail > /configs/show-aclprofiles.out
+show authentication > /configs/show-authentication.out
+show authentication access-level detail > /configs/show-access-level-detail.out
+show client-profile * detail > /configs/show-clientprofile-all.out
+show clock > /configs/show-clock.out
+show cspf neighbor * > /configs/show-cspf-neighbor.out
+show cspf database > /configs/show-cspf-neighbor.out
+show cspf route > /configs/show-cspf-route.out
+show current-config all > /configs/show-currentconfig-all.out
+show current-config message-vpn * > /configs/show-currentconfig-vpns.out
+show debug multipath > /configs/show-multipath.out
+show hardware details > /configs/show-hardware-details.out
+show hostname > /configs/show-hostname.out
+show interface detail > /configs/show-interface.out
+show ip vrf management > /configs/show-vrf-mgmt.out
+show jndi connection-factory * detail > /configs/show-jndi-cf.out
+show jndi queue * detail > /configs/show-jndi-queues.out
+show jndi topic * detail > /configs/show-jndi-topics.out
+show kerberos > /configs/show-kerberos.out
+show kerberos keytab > /configs/show-kerberose-keytab.out
+show kerberos keytab detail > /configs/show-kerberose-keytab-details.out
+show ldap-profile * > /configs/show-ldap-profiles.out
+show logging command > /configs/show-logging-command.out
+show logging config > /configs/show-logging-config.out
+show logging debug > /configs/show-logging-debug.out
+show logging event > /configs/show-logging-event.out
+show product-key > /configs/show-product-key.out
+show routing > /configs/show-routing.out
+show router-name > /configs/show-routername.out
+show ssl server-certificate detail > /configs/show-ssl-server-certificate.out
+show ssl certificate-files > /configs/show-ssl-certificate-files.out
+show syslog * > /configs/show-syslog.out
+!show trusted-root detail > /configs/show-trusted-root-detail.out
+show username * detail > /configs/show-usernames.out
+show version > /configs/show-version.out
+show system > /configs/show-system.out
+show smrp subscriptions > /configs/show-smrp-subscriptions.out
+show message-vpn * rest rest-delivery-point * detail > /configs/show-rest-rdp-detail.out
+show message-vpn * rest rest-consumer * detail > /configs/show-rest-consumer-detail.out
+! VMR Only
+show storage-element * > /configs/show-storage-element.out
+
+! -------------- status/stats ----------------------------
+show bridge #CFGSYNC_REPLICATION_BRIDGE message-vpn #config-sync detail > /configs/show-cfgsync-replication-bridge-detail.out
+show bridge #MSGVPN_REPLICATION_BRIDGE message-vpn * detail > /configs/show-msgvpn-replication-bridge-detail.out
+show bridge * detail > /configs/show-bridges.out
+show client * detail > /configs/show-clients.out
+show config-sync database remote > /configs/show-config-sync-database-remote.out
+show cspf stats > /configs/show-cspf-stats.out
+show cspf neighbor * stats queue > /configs/show-cspf-neighbor-stats.out
+show debug lldp > /configs/show-debug-lldp.out
+show config-sync > /configs/show-config-sync.out
+show config-sync database > /configs/show-config-sync-database.out
+show config-sync database detail > /configs/show-config-sync-database-detail.out
+show message-spool detail > /configs/show-message-spool-detail.out
+show message-spool rates > /configs/show-message-spool-rates.out
+show message-vpn * > /configs/show-vpns.out
+show message-vpn * replication > /configs/show-vpns-replication.out
+show message-vpn * detail > /configs/show-vpn-details.out
+show message-vpn * dynamic-message-routing > /configs/show-vpn-dmr.out
+show message-vpn * dynamic-message-routing dmr-bridge * > /configs/show-vpn-dmr-bridge.out
+show message-spool message-vpn * > /configs/show-message-spool-vpn.out
+show queue * detail > /configs/show-queues-details.out
+show queue * > /configs/show-queues.out
+show redundancy > /configs/show-redundancy.out
+show redundancy detail > /configs/show-redundancy-detail.out
+show replication > /configs/show-replication.out
+show replication stats > /configs/show-replication-stats.out
+show replication stats > /configs/show-replicatioin-stats.out
+show service > /configs/show-service.out
+show topic-endpoint * detail > /configs/show-topicendpoints.out
+! logs
+show log acl wide > /configs/show-log-acl-wide.out
+show log no-subscription-match > /configs/show-log-no-subscription-match.out
+show log rest rest-delivery-point errors wide > /configs/show-log-rdp-errors-wide.out
+! stats
+show stats ssl > /configs/show-stats-ssl.out
+show stats client detail > /configs/show-stats-client-detail.out
+show client * slow-subscriber > /configs/show-client-slow-subs.out
+show message-vpn * stats detail > /configs/show-message-vpn-stats-detail.out
+show client * stats  detail > /configs/show-client-stats-detail.out
+show client * connections wide > /configs/show-client-connections-wide.out
+show message-vpn * rest rest-delivery-point * stats > /configs/show-rest-rdp-stats.out
+! VMR Only
+show system detail > /configs/show-system-detail.out
+show system health > /configs/show-system-health.out
+

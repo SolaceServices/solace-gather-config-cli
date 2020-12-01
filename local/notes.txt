@@ -1,0 +1,14 @@
+Changes
+==============================================
+
+v 2.0 Dec 1, 2020
+- write everything to /usr/sw/jail/configs dir. logs/ folder no longer is writable from CLI. (RT #47396)
+- create /tmp/host-<timestamp> dir & copy output there before tar-ing up.
+- copied both -sw and -hw to same folder
+
+
+TODO
+---------------------------------------------------
+show clients (msg clients)
+show rdp
+show stats, client-stats

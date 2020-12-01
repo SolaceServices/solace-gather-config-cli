@@ -8,13 +8,17 @@ This is a PSG addon script and not an offical Solace product.
 1) Unzip the gather-configs-<version>.zip file
 
 2) FTP/SCP the following files under /usr/sw/jail/cliscripts on Solace PubSub+ Router
-   gather-configs.cli
+   gather-configs-*.cli
    gather-configs.sh
 
 3) In Solace CLI 
-   run gather-configs.cli
+   run gather-configs-sw.cli on software broker
    Ignore any errors from the output
-   solace-cli>  source script gather-configs.cli no-prompt
+   solace-cli>  source script gather-configs-sw.cli no-prompt
+
+   Run the following on hardware appliance:
+   solace-cli>  source script gather-configs-hw.cli no-prompt
+
 
 4) 
    4.1)
@@ -51,7 +55,7 @@ System Software. SolOS-TR Version 8.3.0.11
 
 Copyright 2004-2017 Solace Corporation. All rights reserved.
 
-lab-128-40> source script gather-configs.cli
+lab-128-40> source script gather-configs-hw.cli
 lab-128-40> end
 
 lab-128-40> home
@@ -93,7 +97,7 @@ Copyright 2004-2018 Solace Corporation. All rights reserved.
 
 Operating Mode: Message Routing Node
 
-ip-172-31-7-6> source script gather-configs.cli no-prompt
+ip-172-31-7-6> source script gather-configs-hw.cli no-prompt
 
 ip-172-31-7-6> end
 
@@ -139,7 +143,7 @@ Copyright 2004-2018 Solace Corporation. All rights reserved.
 
 Operating Mode: Message Routing Node
 
-6df6a1d62e77> source script gather-configs.cli no-prompt
+6df6a1d62e77> source script gather-configs-sw.cli no-prompt
 
 6df6a1d62e77> end
 

@@ -14,15 +14,23 @@ outdir=${1:-/tmp}
 echo "Using $outdir as output dir"
 
 #outfile=$outdir/gather-configs_$(hostname)_$(date "+%Y-%m-%dT%H.%m.%S").zip
-outfile=$outdir/gather-configs_$(hostname)_$(date "+%Y-%m-%dT%H.%m.%S").tar.gz
+iname=$(hostname)_$(date "+%Y-%m-%dT%H.%m.%S")
+outfile=$outdir/gather-configs_$iname.tar.gz
 rm -f $outfile
+tmpdir=$outdir/$iname
+mkdir $tmpdir || { echo "Unable to create temp dir $tmpdir"; exit 1; }
 
 cd $jaildir
 #zip -q $outfile configs/show*.out logs/show*.out
-tar -cvzf $outfile configs/show*.out logs/show*.out
+cp -p configs/show*.out $tmpdir
+cd $outdir
+tar -czf $outfile $iname
 if [ -f $outfile ]; then
 	echo "Configs saved in: $outfile"
+	# cleanup and exit
+	rm -f configs/show*.out
+	rm -rf $tmpdir
 else
 	echo "### ERROR saving output file $outfile ###"
+	rm -rf $tmpdir
 fi
-#rm -f configs/show*.out logs/show*.out

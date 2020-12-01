@@ -1,3 +1,0 @@
-show clients (msg clients)
-show rdp
-show stats, client-stats
