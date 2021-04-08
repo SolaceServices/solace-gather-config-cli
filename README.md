@@ -46,7 +46,6 @@ This is a Solace Professional Services addon tool and _not an offical Solace pro
    Upload the /usr/sw/jail/configs/gather-configs_<hostname>_<timestamp>.tar.gz file to solace support filedrop 
 ```
 
-
 ## Sample run
 
 ### Running on the Appliance
@@ -133,7 +132,6 @@ Configs saved in: /usr/sw/jail/configs/gather-configs_ip-172-31-7-6.us-west-1.co
 -rw-r--r-- 1 appuser root 29394 Mar  1 00:45 /usr/sw/jail/configs/gather-configs_ip-172-31-7-6.us-west-1.compute.internal_2019-03-01T00.03.17.tar.gz
 ```
 
-
 ### Running on Docker
 
 ``` sh
@@ -173,37 +171,36 @@ Configs saved in: /usr/sw/jail/configs/gather-configs_6df6a1d62e77_2019-03-01T01
 -rw-r--r-- 1 root root 38120 Mar  1 01:43 /usr/sw/jail/configs/gather-configs_6df6a1d62e77_2019-03-01T01.03.26.tar.gz
 ```
 
-
 ### Using SFTP to get config files
 
 ``` sh
 $ mkdir -p /tmp/lab-130-29-2019_04_15/{logs,configs}
 $ cd /tmp/lab-130-29-2019_04_15
 $ sftp ftpuser@lab-130-29:/logs/show-*.out logs/
-	Solace PubSub+ 3260
-	Password:
-	Connected to lab-130-29.
-	Fetching /logs/show-alarm.out to logs/show-alarm.out
-	/logs/show-alarm.out                                                                                                          100%   62     0.6KB/s   00:00
-	Fetching /logs/show-bridges.out to logs/show-bridges.out
-	Fetching /logs/show-cfgsync-replication-bridge-detail.out to logs/show-cfgsync-replication-bridge-detail.out
-	Fetching /logs/show-clients.out to logs/show-clients.out
-	/logs/show-clients.out                                                                                                        100% 1530    15.3KB/s   00:00
-	Fetching /logs/show-config-sync-database-detail.out to logs/show-config-sync-database-detail.out
-	/logs/show-config-sync-database-detail.out                                                                                    100%  347     3.5KB/s   00:00
-	Fetching /logs/show-config-sync-database-remote.out to logs/show-config-sync-database-remote.out
-	/logs/show-config-sync-database-remote.out
+    Solace PubSub+ 3260
+    Password:
+    Connected to lab-130-29.
+    Fetching /logs/show-alarm.out to logs/show-alarm.out
+    /logs/show-alarm.out                                                                                                          100%   62     0.6KB/s   00:00
+    Fetching /logs/show-bridges.out to logs/show-bridges.out
+    Fetching /logs/show-cfgsync-replication-bridge-detail.out to logs/show-cfgsync-replication-bridge-detail.out
+    Fetching /logs/show-clients.out to logs/show-clients.out
+    /logs/show-clients.out                                                                                                        100% 1530    15.3KB/s   00:00
+    Fetching /logs/show-config-sync-database-detail.out to logs/show-config-sync-database-detail.out
+    /logs/show-config-sync-database-detail.out                                                                                    100%  347     3.5KB/s   00:00
+    Fetching /logs/show-config-sync-database-remote.out to logs/show-config-sync-database-remote.out
+    /logs/show-config-sync-database-remote.out
 ...
 
 $ sftp ftpuser@lab-130-29:/configs/show-*.out configs/
-	Solace PubSub+ 3260
-	Password:
-	Connected to lab-130-29.
-	Fetching /configs/show-access-level-detail.out to configs/show-access-level-detail.out
-	/configs/show-access-level-detail.out                                                                                         100%  271     2.6KB/s   00:00
-	Fetching /configs/show-aclprofiles.out to configs/show-aclprofiles.out
-	/configs/show-aclprofiles.out                                                                                                 100%  454     4.4KB/s   00:00
-	Fetching /configs/show-authentication.out to configs/show-authentication.out
+    Solace PubSub+ 3260
+    Password:
+    Connected to lab-130-29.
+    Fetching /configs/show-access-level-detail.out to configs/show-access-level-detail.out
+    /configs/show-access-level-detail.out                                                                                         100%  271     2.6KB/s   00:00
+    Fetching /configs/show-aclprofiles.out to configs/show-aclprofiles.out
+    /configs/show-aclprofiles.out                                                                                                 100%  454     4.4KB/s   00:00
+    Fetching /configs/show-authentication.out to configs/show-authentication.out
 /configs/show-authentication.out
 ...
 
