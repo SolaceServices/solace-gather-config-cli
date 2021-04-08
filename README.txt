@@ -203,5 +203,5 @@ $ ls -l lab-130-29-2019_04_15.zip
 -rw-r--r--  1 nram  wheel  42631 Apr 15 20:27 lab-130-29-2019_04_15.zip
 
 ---
-Version 1.5: Apr 24, 2019
-Ramesh Natarajan, Solace PSG
+Version 2.0: Apr 07, 2020
+nram, Solace

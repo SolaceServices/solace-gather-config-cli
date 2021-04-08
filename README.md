@@ -1,9 +1,15 @@
-# Gather Configs
-CLI / Shell script to collect PubSub+ config and state for troubleshooting.
-This is a PSG addon script and not an offical Solace product.
+# Solace gather configs
 
-### STEPS 
-```
+Script(s) to collect PubSub+ config and state for troubleshooting.
+
+This is a Solace Professional Services addon tool and _not an offical Solace product_.
+
+(C) Solace. **The code is not free for use.**
+
+## Steps
+
+``` txt
+
 1) Unzip the gather-configs-<version>.zip file
 
 2) FTP/SCP the following files under /usr/sw/jail/cliscripts on Solace PubSub+ Router
@@ -41,10 +47,11 @@ This is a PSG addon script and not an offical Solace product.
 ```
 
 
-### SAMPLE RUN
+## Sample run
 
-#### Running on the Appliance
-```
+### Running on the Appliance
+
+``` sh
 $ ssh admin@lab-128-40
 Password:
 
@@ -70,9 +77,10 @@ Password:
 Configs saved in: /usr/sw/jail/configs/gather-configs_lab-128-40_2019-03-01T01.03.56.tar.gz
 ```
 
-#### Running on AWS
+### Running on AWS
 
-```
+``` sh
+
 $ ssh -i <keyfile>.pem sysadmin@<public-ip-or-dns-name>
 Solace PubSub+ Enterprise
 
@@ -126,9 +134,10 @@ Configs saved in: /usr/sw/jail/configs/gather-configs_ip-172-31-7-6.us-west-1.co
 ```
 
 
-#### Running on Docker
+### Running on Docker
 
-```
+``` sh
+
 $ docker exec -it <container-name> /usr/sw/loads/currentload/bin/cli -A
 
 Solace PubSub+ Enterprise Version 9.0.0.17
@@ -166,7 +175,8 @@ Configs saved in: /usr/sw/jail/configs/gather-configs_6df6a1d62e77_2019-03-01T01
 
 
 ### Using SFTP to get config files
-```
+
+``` sh
 $ mkdir -p /tmp/lab-130-29-2019_04_15/{logs,configs}
 $ cd /tmp/lab-130-29-2019_04_15
 $ sftp ftpuser@lab-130-29:/logs/show-*.out logs/
@@ -202,16 +212,16 @@ $ zip -q -r lab-130-29-2019_04_15.zip lab-130-29-2019_04_15/
 $ ls -l lab-130-29-2019_04_15.zip
 -rw-r--r--  1 nram  wheel  42631 Apr 15 20:27 lab-130-29-2019_04_15.zip
 ```
-## Built with
+
+## About
+
+### Authors
+
+* [Ramesh Natarajan](mailto:ramesh.natarajan@solace.com), Solace PSG
+
+### Resources
+
 * [Solace CLI](https://docs.solace.com/Solace-CLI/Using-Solace-CLI.htm)
-
-## Authors
-* Ramesh Natarajan, Solace PSG
-
-## Licence
-(c) Solace Systems. **The code is not free for use.**
-
-## Resources
 * [Solace Dev Portal](http://dev.solace.com)
 * [Solace Documentation](http://docs.solace.com)
 * [Solace Community](http://solace.community)
